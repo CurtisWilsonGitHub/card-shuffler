@@ -97,10 +97,12 @@ function cardShuffle(){
   // replace number with card values
 
 var faceSwap = function(deck,faces){
-  for(var i = 0; i < 53; i++){
-    deck.splice(deck[i],1,faces[deck[i]])
+  var playingCards = [];
+  for(var i = 51; i > 0; i--){
+    playingCards.push(faces[deck[i]]);
   }
-  return(deck);
+  console.log(playingCards);
+  return(playingCards);
 }
 
     var newDeck = shuffleDeck(deckMaker());
